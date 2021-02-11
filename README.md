@@ -14,3 +14,18 @@ django-admin startproject sand .
 ```
 django-admin startapp my_app
 ```
+
+3. register the app in ```sand/settings.py```
+```python
+INSTALLED_APPS = [
+    # default
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    # custom
+    'my_app'
+]
+```
