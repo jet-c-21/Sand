@@ -29,3 +29,10 @@ INSTALLED_APPS = [
     'my_app'
 ]
 ```
+
+4. for building admin page
+```
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+```
