@@ -1,1 +1,6 @@
+# web framework
 django
+
+# web scrape
+requests
+bs4
