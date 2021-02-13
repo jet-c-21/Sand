@@ -1,21 +1,20 @@
 # Sand
 scrape and display the data with Django
----
+------
 <br>
 
-## Building Recording
-1. create django project
-```
-# beware you are in the project root dir
+## Development Recording
+##### 1. create django project
+```shell script
+// beware you are in the project root dir
 django-admin startproject sand .
 ```
-
-2. create the first app
-```
+##### 2. create the first app
+```shell script
 django-admin startapp my_app
 ```
 
-3. register the app in ```sand/settings.py```
+##### 3. register the app in ```sand/settings.py```
 ```python
 INSTALLED_APPS = [
     # default
@@ -30,8 +29,8 @@ INSTALLED_APPS = [
 ]
 ```
 
-4. for building admin page
-```
+##### 4. building admin page
+```shell script
 python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser
