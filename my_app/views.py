@@ -11,10 +11,16 @@ def home(request) -> HttpResponse:
 
 def new_search(request) -> HttpResponse:
     search_str = request.POST.get('search')
+
+    if not search_str:
+        return home(request)
+
     # record to db
     models.Search.objects.create(search=search_str)
 
-    LACraigList.search(search_str)
+    min_price = request.POST.get('min-price')
+    max_price = request.POST.get('max-price')
+    LACraigList.search(search_str, min_price, max_price)
 
     context_for_front_end = {
         'search': search_str

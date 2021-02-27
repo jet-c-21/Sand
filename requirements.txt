@@ -4,3 +4,4 @@ django
 # web scrape
 requests
 bs4
+pyquery
